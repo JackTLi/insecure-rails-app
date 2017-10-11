@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+  skip_before_action :verify_authenticity_token
+
   def new
   end
 
@@ -24,7 +26,7 @@ class UsersController < ApplicationController
 
     user.update_attributes(user_params)
 
-    redirect_to user_path(user), flash: { notice: "#{user.inspect}" }
+    redirect_to user_path(user), flash: { notice: "#{user.inspect}" } unless user.first_name == "HAX"
   end
 
   def user_params

