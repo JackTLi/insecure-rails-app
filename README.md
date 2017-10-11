@@ -1,24 +1,3 @@
-# README
+# Insecure Rails App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is a super insecure rails app that violates and disables rails security features. This is to demonstrate all of the niceness that Rails gives us in terms of security and what kind of attacks are available without them.
