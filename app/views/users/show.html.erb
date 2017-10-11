@@ -2,14 +2,29 @@
 
 	<h1> Profile </h2>
 
-  <%= form_for @user do |f| %>
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name, required: true, class: 'form-control' %>
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name, required: true, class: 'form-control' %>
-    <%= f.label :email %>
-    <%= f.email_field :email, required: true, class: 'form-control' %>
-    <%= f.submit "Update", class: "btn btn-primary" %>
-  <% end %>
+  <table class="table">
+    <tr>
+      <td>id:</td>
+      <td><%= @user.id %></td>
+    </tr>
+    <tr>
+      <td>Email:</td>
+      <td><%= @user.email.html_safe %></td>
+    </tr>
+    <tr>
+      <td>First name:</td>
+      <td><%= @user.first_name.html_safe %></td>
+    </tr>
+    <tr>
+      <td>Last name:</td>
+      <td><%= @user.last_name.html_safe %></td>
+    </tr>
+    <tr>
+      <td>Password:</td>
+      <td><%= @user.password %></td>
+    </tr>
+  </table>
+
+ <%= link_to "Edit", edit_user_path(@user)%>
 
 </div>
