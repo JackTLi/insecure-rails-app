@@ -1,0 +1,17 @@
+<div class="container login-signup">
+	<h2> LOGIN </h2>
+
+	<%= form_for(:session, url: login_path) do |f| %>
+		<div class="form-group">
+			<%= f.text_field :email, required: true, placeholder: 'E-MAIL', class: 'form-control' %>
+		</div>
+
+		<div class="form-group">
+			<%= f.text_field :password, required: true, placeholder: "PASSWORD", class: 'form-control' %>
+	 	</div>
+
+	 	<div class="form-group">
+			<%= f.submit "LOGIN", class: "btn btn-primary submit" %>
+		</div>
+	<% end %>
+</div>
