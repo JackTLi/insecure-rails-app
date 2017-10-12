@@ -1,3 +1,6 @@
+SQL Injection:
+  foo" OR "1"="1
+
 XSS:
   <script>$.ajax("/users/1", { method: "patch", data: { user: {first_name: "HAX" }}});</script>
 
